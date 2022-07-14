@@ -16,10 +16,10 @@ class BlogController extends Controller
         ]);
     }
 
-    public Function show($slug){
+    public Function show(Blog $blog){
         return view('blog', [
             "title" => "Single Blog",
-            "blog" => Blog::find($slug)
+            "blog" => $blog
         ]);
     }
 }
