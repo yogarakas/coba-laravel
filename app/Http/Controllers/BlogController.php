@@ -11,15 +11,15 @@ class BlogController extends Controller
 {
     public Function index(){
         return view('blogs', [
-            "title" => "Blog",
+            "title" => "Blogs",
             "blogs" => Blog::all()
         ]);
     }
 
     public Function show($slug){
         return view('blog', [
-            "title" => "single-post",
-            "blog" => BLog::find($slug)
+            "title" => "Single Blog",
+            "blog" => Blog::find($slug)
         ]);
     }
 }
